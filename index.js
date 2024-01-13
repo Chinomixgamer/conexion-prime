@@ -7,10 +7,10 @@ app.use(cors());
 app.use(express.json()); // Para parsear el cuerpo de las solicitudes como JSON
 
 const dbConfig = {
-  user: 'Raygadas',
-  password: 'pass',
-  connectString: 'localhost:1521/XE'
-};
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    connectString: 'localhost:1521/XE'
+  };
 
 let connection; // Variable para almacenar la conexión a la base de datos
 
